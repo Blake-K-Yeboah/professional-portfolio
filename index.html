@@ -28,6 +28,20 @@
             <a href="#contact" class="navbar__link">Contact</a>
           </li>
         </ul>
+        <div class="navbar__menu-icon">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.75 22.5H26.25V20H3.75V22.5ZM3.75 16.25H26.25V13.75H3.75V16.25ZM3.75 7.5V10H26.25V7.5H3.75Z"
+              fill="white"
+            />
+          </svg>
+        </div>
       </div>
     </nav>
     <header class="header scrollspy" id="home">
@@ -46,7 +60,7 @@
             >Conversion Kings</a
           >.
         </p>
-        <a href="#about" class="header__button button button__primary">
+        <a href="#about" class="button button__primary">
           About Me
           <svg
             width="16"
@@ -118,10 +132,7 @@
               quality JavaScript experiments for large national and
               international brands like Spotlight and Nespresso.
             </p>
-            <a
-              href="#updateAtEnd"
-              class="header__button button button__primary"
-            >
+            <a href="#updateAtEnd" class="button button__primary">
               Download CV
               <svg
                 width="21"
@@ -291,7 +302,7 @@
       </div>
       <a
         href="https://github.com/Blake-K-Yeboah"
-        class="header__button button button__primary"
+        class="button button__primary"
       >
         View GitHub
         <svg
@@ -500,10 +511,7 @@
         </p>
       </div>
       <div class="blog-section__posts"></div>
-      <a
-        href="https://blog.blakeyeboah.com/"
-        class="header__button button button__primary"
-      >
+      <a href="https://blog.blakeyeboah.com/" class="button button__primary">
         View Blog
         <svg
           width="20"
@@ -549,14 +557,110 @@
           Fill out the following form and I’ll be in touch soon
         </p>
       </div>
+      <form class="contact-us__form">
+        <div class="contact-us__form-grid">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="contact-us__form-input"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div>
+            <label for="phone">Phone (Optional)</label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              class="contact-us__form-input"
+              placeholder="Enter your phone #"
+            />
+          </div>
+        </div>
+        <div class="contact-us__form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="contact-us__form-input"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="contact-us__form-group">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            class="contact-us__form-textarea"
+            placeholder="Enter your message"
+          ></textarea>
+        </div>
+        <div class="contact-us__form-group">
+          <button type="submit" class="button button__primary">
+            Send Message
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_9_453)">
+                <path
+                  d="M19.8175 0.182443C19.904 0.269108 19.9632 0.379286 19.9876 0.49929C20.0121 0.619294 20.0007 0.743835 19.955 0.857443L12.6813 19.0412C12.6172 19.2013 12.5101 19.3407 12.3719 19.4439C12.2337 19.5471 12.0697 19.6102 11.898 19.6262C11.7262 19.6423 11.5534 19.6106 11.3985 19.5347C11.2436 19.4589 11.1126 19.3417 11.02 19.1962L7.04751 12.9524L0.803756 8.97994C0.657903 8.88742 0.540446 8.75641 0.464343 8.60135C0.388241 8.4463 0.356453 8.27324 0.372487 8.10126C0.388521 7.92928 0.451754 7.76508 0.555207 7.62676C0.658661 7.48845 0.798314 7.38141 0.958756 7.31744L19.1425 0.0461931C19.2561 0.000458393 19.3807 -0.0108913 19.5007 0.013554C19.6207 0.0379992 19.7308 0.097162 19.8175 0.183693V0.182443ZM8.29501 12.5874L11.7463 18.0099L17.6625 3.21994L8.29501 12.5874ZM16.7788 2.33619L1.98876 8.25244L7.41251 11.7024L16.78 2.33619H16.7788Z"
+                  fill="#FF9800"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_9_453">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </form>
     </section>
+
+    <footer class="footer">
+      <a href="#home" class="footer__button button button__primary"
+        >BACK TO TOP
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_9_465)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.146 1.14592C11.1925 1.09935 11.2476 1.06241 11.3084 1.0372C11.3691 1.012 11.4342 0.999023 11.5 0.999023C11.5658 0.999023 11.6309 1.012 11.6916 1.0372C11.7524 1.06241 11.8076 1.09935 11.854 1.14592L15.854 5.14592C15.9479 5.2398 16.0006 5.36714 16.0006 5.49992C16.0006 5.63269 15.9479 5.76003 15.854 5.85392C15.7601 5.9478 15.6328 6.00055 15.5 6.00055C15.3672 6.00055 15.2399 5.9478 15.146 5.85392L12 2.70692V12.4999C12 13.163 11.7366 13.7988 11.2678 14.2677C10.7989 14.7365 10.1631 14.9999 9.50001 14.9999H1.50001C1.3674 14.9999 1.24022 14.9472 1.14646 14.8535C1.05269 14.7597 1.00001 14.6325 1.00001 14.4999C1.00001 14.3673 1.05269 14.2401 1.14646 14.1464C1.24022 14.0526 1.3674 13.9999 1.50001 13.9999H9.50001C9.89783 13.9999 10.2794 13.8419 10.5607 13.5606C10.842 13.2793 11 12.8977 11 12.4999V2.70692L7.85401 5.85392C7.80752 5.9004 7.75233 5.93728 7.69159 5.96244C7.63085 5.9876 7.56575 6.00055 7.50001 6.00055C7.43427 6.00055 7.36917 5.9876 7.30843 5.96244C7.24769 5.93728 7.1925 5.9004 7.14601 5.85392C7.09952 5.80743 7.06264 5.75224 7.03749 5.6915C7.01233 5.63076 6.99938 5.56566 6.99938 5.49992C6.99938 5.43417 7.01233 5.36907 7.03749 5.30833C7.06264 5.24759 7.09952 5.1924 7.14601 5.14592L11.146 1.14592Z"
+              fill="#FF9800"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_9_465">
+              <rect width="16" height="16" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <p class="footer__text">&copy; 2022 Blake Yeboah. All Rights Reserved.</p>
+    </footer>
 
     <div id="project-modal-overlay"></div>
 
     <!-- GSAP & It's plugins -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 
-    <!-- My JavaScritp -->
+    <!-- My JavaScript -->
     <script src="./js/main.js"></script>
   </body>
 </html>
