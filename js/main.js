@@ -494,6 +494,7 @@ form.addEventListener("submit", (e) => {
     if (hasError) {
         e.preventDefault();
         errorAlert.style.display = "flex";
+        errorAlert.scrollIntoView({ block: "center" });
     } else {
         errorAlert.style.display = "none";
     }

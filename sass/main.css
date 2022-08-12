@@ -512,6 +512,13 @@ html {
   margin-top: 48px;
 }
 
+@media screen and (max-width: 768px) {
+  .about-section__tab-contents {
+    width: 90%;
+    margin: 48px auto 0 auto;
+  }
+}
+
 .about-section__tab-content {
   display: none;
   -webkit-box-align: center;
@@ -547,6 +554,26 @@ html {
   color: #212529;
 }
 
+@media screen and (max-width: 768px) {
+  .about-section__tab-content .about-tab__heading {
+    display: none;
+  }
+}
+
+.about-section__tab-content .about-tab__heading.mobile-heading {
+  display: none;
+  line-height: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section__tab-content .about-tab__heading.mobile-heading {
+    display: block;
+  }
+  .about-section__tab-content .about-tab__heading.mobile-heading span {
+    display: block;
+  }
+}
+
 .about-section__tab-content .about-tab__paragraph {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -557,6 +584,12 @@ html {
   margin: 25px auto 35px auto;
   max-width: 800px;
   color: #6c757d;
+}
+
+@media screen and (max-width: 768px) {
+  .about-section__tab-content .about-tab__img {
+    width: 175px;
+  }
 }
 
 .about-section__tab-content .skills-tab__container {

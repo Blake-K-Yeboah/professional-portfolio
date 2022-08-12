@@ -486,6 +486,11 @@ html {
     &__tab-contents {
         width: 100%;
         margin-top: 48px;
+
+        @include tablet {
+          width: 90%;
+          margin: 48px auto 0 auto;
+        }
     }
 
     &__tab-content {
@@ -512,6 +517,23 @@ html {
                     font-weight: 600;
                     color: $dark;
                 }
+
+                @include tablet {
+                  display: none;
+                }
+
+                &.mobile-heading {
+                  display: none;
+                  line-height: 35px;
+
+                  @include tablet {
+                    display: block;
+
+                    span {
+                      display: block;
+                    }
+                  }
+                }
             }
 
             &__paragraph {
@@ -524,6 +546,12 @@ html {
                 margin: 25px auto 35px auto;
                 max-width: 800px;
                 color: $lightGray;
+            }
+
+            &__img {
+              @include tablet {
+                width: 175px;
+              }
             }
         }
 
