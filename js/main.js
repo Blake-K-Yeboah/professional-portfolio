@@ -30,6 +30,31 @@ window.addEventListener("scroll", function () {
     }
 });
 
+// Mobile Navigation
+const menuIcon = document.querySelector(".navbar__menu-icon");
+const mobileNav = document.querySelector(".mobile-nav");
+const mobileNavCloseIcon = document.querySelector(".mobile-nav__close-icon");
+
+menuIcon.addEventListener("click", function () {
+    document.querySelector("body").style.overflow = "hidden";
+    mobileNav.style.display = "flex";
+    gsap.to(".mobile-nav", { opacity: 1, duration: 0.5 });
+});
+
+mobileNavCloseIcon.addEventListener("click", function () {
+    document.querySelector("body").style.overflow = "auto";
+    gsap.to(".mobile-nav", { opacity: 0, duration: 0.5 });
+    setTimeout(() => {
+        mobileNav.style.display = "none";
+    }, 750);
+});
+
+document.querySelectorAll(".mobile-nav__link").forEach((link) => {
+    link.addEventListener("click", function () {
+        mobileNavCloseIcon.click();
+    });
+});
+
 // Tab Functionality
 const tabHeadings = document.querySelectorAll(".about-section__tab-heading");
 
@@ -433,8 +458,47 @@ const fetchBlogPosts = async () => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Fetch Blog Posts
     fetchBlogPosts();
 
+    // Set Year Dynamically
     const year = new Date().getFullYear();
     document.querySelector("#year").textContent = year;
+
+    // Clear Input Fields
+    document.querySelectorAll(".contact-us__form-input").forEach((input) => {
+        input.value = "";
+    });
+    document.querySelector(".contact-us__form-textarea").value == "";
+});
+
+// Handle Form Submission
+const form = document.querySelector(".contact-us__form");
+const errorAlert = document.querySelector(".contact-us__form-alert");
+const alertClose = document.querySelector(".contact-us__form-alert-close");
+
+form.addEventListener("submit", (e) => {
+    // Validate Inputs
+    let hasError = false;
+
+    document.querySelectorAll(".contact-us__form-input").forEach((input) => {
+        if (input.value == "" && input.getAttribute("name") != "phone") {
+            hasError = true;
+        }
+    });
+
+    if (document.querySelector(".contact-us__form-textarea").value == "") {
+        hasError = true;
+    }
+
+    if (hasError) {
+        e.preventDefault();
+        errorAlert.style.display = "flex";
+    } else {
+        errorAlert.style.display = "none";
+    }
+});
+
+alertClose.addEventListener("click", () => {
+    errorAlert.style.display = "none";
 });
