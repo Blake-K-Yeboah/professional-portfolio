@@ -116,6 +116,27 @@ html {
   color: #ff9800;
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(100);
+          backdrop-filter: blur(100);
+}
+.mobile-nav__close-icon {
+  position: absolute;
+  right: 5vw;
+  top: 25px;
+}
+
 .header {
   width: 100vw;
   height: 100vh;
@@ -171,7 +192,7 @@ html {
 @media screen and (max-width: 768px) {
   .header__name {
     font-size: 50px;
-    margin: 12.5px 0;
+    margin: 12.5px auto;
     width: 90%;
   }
 }
@@ -724,7 +745,7 @@ html {
   transition: opacity 0.25s ease;
 }
 .blog-section__post-read-post:hover {
-  opacity: 0.75;
+  opacity: 0.5;
 }
 .blog-section__post-read-post svg {
   margin-left: 7.5px;
