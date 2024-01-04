@@ -24,7 +24,7 @@ gsap.from(".header__content > *", {
 });
 
 if (navigator.userAgent.includes("Instagram")) {
-  alert("INSTAGRAM BROWSER");
+  document.getElementById('instagram-link').click();
 }
 
 // Scroll Spy
