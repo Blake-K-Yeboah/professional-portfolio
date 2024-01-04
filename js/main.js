@@ -23,6 +23,10 @@ gsap.from(".header__content > *", {
   delay: 1,
 });
 
+if (navigator.userAgent.includes("Instagram")) {
+  alert("INSTAGRAM BROWSER");
+}
+
 // Scroll Spy
 const navbarLinks = document.querySelectorAll(".navbar__link");
 
